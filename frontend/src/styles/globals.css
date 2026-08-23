@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Capgemini branding */
+:root {
+  --capgemini-blue: #0066CC;
+  --capgemini-dark: #003366;
+  --capgemini-light: #E6F2FF;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--capgemini-blue);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Risk gauge colors */
+.risk-green {
+  color: #10b981;
+}
+
+.risk-yellow {
+  color: #f59e0b;
+}
+
+.risk-orange {
+  color: #f97316;
+}
+
+.risk-red {
+  color: #ef4444;
+}
+
+/* Tier badges */
+.tier-1 {
+  background-color: #ef4444;
+  color: white;
+}
+
+.tier-2 {
+  background-color: #f97316;
+  color: white;
+}
+
+.tier-3 {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.tier-4 {
+  background-color: #9ca3af;
+  color: white;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button animations */
+.btn-primary {
+  background-color: var(--capgemini-blue);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--capgemini-dark);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563;
+}
